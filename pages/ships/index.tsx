@@ -5,8 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const ships: NextPage<any> = (props) => {
-  console.log(props);
-
   return (
     <>
       {

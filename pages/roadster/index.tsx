@@ -4,7 +4,6 @@ import React from 'react'
 import Image from 'next/image';
 
 const roadster: NextPage<any> = ({ roadster, error, err }) => {
-  const datee = roadster && new Date(roadster.launch_date_unix * 1000).toDateString()
   return (
 
     <>
@@ -19,7 +18,7 @@ const roadster: NextPage<any> = ({ roadster, error, err }) => {
                 <p className='text-justify text-sm mb-3'>{roadster.details}</p>
                 <p className='text-justify text-sm mb-3'>Speed : {roadster.speed_kph} kph / {roadster.speed_mph} mph</p>
                 <p className='text-justify text-sm mb-3'>Earth Distance : {roadster.earth_distance_km} km / {roadster.earth_distance_mi} mil</p>
-                <p className='text-justify text-sm mb-3'>Lauch Date Unix : {datee}</p>
+                <p className='text-justify text-sm mb-3'>Lauch Date Unix : {new Date(roadster.launch_date_unix * 1000).toDateString()}</p>
                 <p className='text-justify text-sm mb-3'>Lauch Mass : {roadster.launch_mass_kg} kg / {roadster.launch_mass_lbs} lbs</p>
                 <p className='text-justify text-sm mb-3'>Mars Distance : {roadster.mars_distance_km} km / {roadster.mars_distance_mi} mil</p>
                 <p className='text-justify text-sm mb-3'>Orbit Type : {roadster.orbit_type}</p>
