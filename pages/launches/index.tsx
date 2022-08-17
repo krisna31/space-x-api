@@ -61,16 +61,22 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     const options = { method: "GET" }
     const result = await fetch("https://api.spacexdata.com/v5/launches", options)
     const launches = await result.json()
+    const paths = launches.map((launch: { id: any; }) => ({
+      params: { id: launch.id },
+    }))
     if (!launches) return {
       props: {
         error: true,
-        err: errorCatch
+        err: errorCatch,
+        fallback: false
       }
     }
     return {
       props: {
         launches,
         notFound: false,
+        fallback: false,
+        paths
       }
     }
   } catch (err) {
@@ -78,7 +84,8 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     return {
       props: {
         error: true,
-        err: errorCatch
+        err: errorCatch,
+        fallback: false
       }
     }
   }

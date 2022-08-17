@@ -25,7 +25,7 @@ const Layout = (props: { children: any }) => {
         <link rel="icon" href="/favicon2.ico" />
       </Head>
 
-      <div className="container bg-gradient-to-b from-sky-400 to-sky-200 flex flex-col justify-between dark:bg-gradient-to-b dark:from-gray-900 dark:to-gray-600 min-h-screen min-w-full dark:text-white text-black font-Space-Grotesk">
+      <div className="container flex flex-col justify-between min-h-screen min-w-full dark:text-white text-black font-Space-Grotesk absolute z-10 backdrop-blur-sm">
         <>
           <nav className='flex justify-between p-2 bg-inherit'>
             <Link href="/" className='bg-white'>
