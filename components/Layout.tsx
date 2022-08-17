@@ -49,7 +49,7 @@ const Layout = (props: { children: any }) => {
           {props.children}
           <footer className="text-center">
             <p className='bg-gradient-to-r dark:from-sky-400 dark:to-sky-200 font-bold bg-clip-text text-transparent
-            from-black to-slate-700'>Build With Next Js</p>
+            from-black to-slate-700 cursor-default'>Build With Next Js</p>
           </footer>
         </>
       </div>
