@@ -51,7 +51,7 @@ const id = (props: any) => {
               <Link href={`/rockets/${launch.rocket}`}>
                 <p className='text-justify text-sm mb-3 cursor-pointer underline hover:text-red-600'>Rocket That This Mission Use</p>
               </Link>
-              <iframe width="560" height="315" src={`https://www.youtube.com/embed/${launch.links.youtube_id}`} allowFullScreen></iframe>
+              <iframe width="333" height="216" src={`https://www.youtube.com/embed/${launch.links.youtube_id}`} allowFullScreen></iframe>
             </div>
           :
           <h2 className="flex justify-center items-center text-4xl animate-bounce">Loading...</h2>

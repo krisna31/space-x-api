@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next'
 import type { NextPage } from 'next'
 import React from 'react'
 import Image from 'next/image';
+import MyIframe from '../../components/MyIframe';
 
 const roadster: NextPage<any> = ({ roadster, error, err }) => {
   return (
@@ -22,7 +23,7 @@ const roadster: NextPage<any> = ({ roadster, error, err }) => {
                 <p className='text-justify text-sm mb-3'>Lauch Mass : {roadster.launch_mass_kg} kg / {roadster.launch_mass_lbs} lbs</p>
                 <p className='text-justify text-sm mb-3'>Mars Distance : {roadster.mars_distance_km} km / {roadster.mars_distance_mi} mil</p>
                 <p className='text-justify text-sm mb-3'>Orbit Type : {roadster.orbit_type}</p>
-                <iframe width="560" height="315" src={`https://www.youtube.com/embed/${roadster.video.split("/")[3]}`} allowFullScreen></iframe>
+                <MyIframe id={roadster.video.split("/")[3]} />
               </div>
               <div className='flex flex-wrap justify-center items-center gap-1'>
                 {
